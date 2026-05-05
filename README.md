@@ -1,3 +1,36 @@
+# 📌 Desafios
+
+Repositório contendo soluções para desafios de programação(Projeto Console) e uma API desenvolvida em .NET.
+
+---
+
+## 📦 Organização do repositório
+
+Este repositório está dividido em dois contextos principais:
+
+### 🧠 Desafios (algoritmos)
+
+A pasta `Desafios/` contém implementações de desafios de lógica de programação (estilo LeetCode), como:
+
+* Fibonacci
+* Palíndromo
+* Normalização de texto
+
+Os desafios foram desenvolvidos em um **projeto Console**, utilizando **interfaces** para melhor organização e separação de responsabilidades.
+
+📌 Objetivo:
+
+* Demonstrar clareza na implementação
+* Aplicar boas práticas mesmo em problemas simples
+
+---
+
+### 🚀 API (Oficina)
+
+O projeto `Oficina.WebAPI/` contém a API desenvolvida para o desafio técnico descrito abaixo.
+
+---
+
 # 📌 Oficina API
 
 API desenvolvida em **.NET** para gerenciamento de orçamentos em uma oficina mecânica, conforme proposto no desafio técnico.
@@ -135,14 +168,13 @@ Foi utilizado o **Entity Framework Core com banco em memória (InMemory)** com o
 
 ## ⚖️ Decisões de arquitetura
 
-Para manter o foco no desafio e na clareza da solução:
+Para manter o foco no escopo do desafio e na clareza da solução, foram adotadas as seguintes decisões:
 
-* Não foi utilizada camada de repositório
-* Não foi aplicada uma arquitetura completa (DDD/Clean Architecture)
-* Utilizado banco em memória ao invés de banco relacional
-* O mapeamento entre entidades e DTOs foi realizado de forma manual, considerando a simplicidade do projeto.
+- Não foi aplicada uma arquitetura completa (DDD/Clean Architecture), mantendo a implementação concentrada na camada de Web API
+- Utilização de banco em memória (EF Core InMemory) para simplificar a execução e evitar dependências externas
+- Mapeamento entre entidades e DTOs realizado de forma manual, considerando a simplicidade do cenário
 
-📌 Essas decisões foram intencionais para evitar complexidade desnecessária no contexto do teste.
+📌 Essas decisões foram intencionais, visando reduzir complexidade e facilitar a avaliação da solução.
 
 ---
 
@@ -150,12 +182,12 @@ Para manter o foco no desafio e na clareza da solução:
 
 Em um ambiente de produção ou projeto real, adotaria uma abordagem mais robusta, incluindo:
 
-* Uso de **SQL Server** como banco de dados
-* Configuração com **Docker e Docker Compose** para facilitar a execução e padronização do ambiente
-* Separação por camadas, com uso de  Clean Architecture / DDD (exemplo: Domain, Application, Infra, testes...)
+* Uso de **SQL Server**
+* Uso de **Docker e Docker Compose**
+* Arquitetura com **DDD / Clean Architecture**
 * Testes automatizados
 
-📌 Essas escolhas refletem minhas preferências e práticas usuais de desenvolvimento, além de facilitarem a execução e avaliação do projeto em ambientes reais.
+📌 Essas escolhas refletem minhas práticas usuais e facilitam padronização e execução do ambiente.
 
 ---
 
@@ -173,21 +205,9 @@ https://localhost:{porta}/swagger
 
 ---
 
-## ✅ Conclusão
-
-A solução atende aos requisitos do desafio, demonstrando:
-
-* Validação consistente
-* Separação de responsabilidades
-* Código limpo e organizado
-* Uso de boas práticas
-
----
-
 ## 💬 Resumo final
 
-> O projeto foi desenvolvido com foco em simplicidade, clareza e aderência ao escopo do desafio, enquanto evidencia conhecimento de boas práticas aplicáveis em cenários reais.
+> O projeto foi desenvolvido com foco em clareza, boas práticas e aderência ao escopo do desafio, enquanto demonstra conhecimento de abordagens mais robustas para cenários reais.
 
 ---
 
-Se quiser, posso te dar uma versão **ultra enxuta (tipo 10 linhas)** ou uma **versão “impacto máximo” com badges e destaque visual** pra chamar atenção de recrutador.
