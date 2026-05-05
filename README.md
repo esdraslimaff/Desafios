@@ -182,10 +182,10 @@ Para manter o foco no escopo do desafio e na clareza da solução, foram adotada
 
 Em um ambiente de produção ou projeto real, adotaria uma abordagem mais robusta, incluindo:
 
-* Uso de **SQL Server**
-* Uso de **Docker e Docker Compose**
-* Arquitetura com **DDD / Clean Architecture**
-* Testes automatizados
+- Utilização de banco de dados relacional (ex: SQL Server)
+- Uso de Docker e Docker Compose para padronização do ambiente
+- Separação por camadas (ex: Domain, Application, Infrastructure e API), seguindo princípios de Clean Architecture/DDD
+- Implementação de testes automatizados
 
 📌 Essas escolhas refletem minhas práticas usuais e facilitam padronização e execução do ambiente.
 
