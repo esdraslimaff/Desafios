@@ -10,6 +10,7 @@ while (true)
     Console.WriteLine("0 - Sair.");
     Console.WriteLine("1 - Desafio do Palíndromo.");
     Console.WriteLine("2 - Desafio do Fibonacci.");
+    Console.WriteLine("3 - Desafio Normalizador de Texto");
     Console.WriteLine("=================================");
     Console.Write("Escolha uma opção: ");
 
@@ -25,6 +26,7 @@ while (true)
     {
         "1" => new DesafioPalindromo(),
         "2" => new DesafioFibonacci(),
+        "3" => new DesafioNormalizadorTextual(),
         _ => null
     };
 
