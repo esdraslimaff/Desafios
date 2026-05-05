@@ -1,15 +1,40 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using Desafios.Apresentacao;
+using Desafios.Interfaces;
 
-// Desafio do Palindromo
+while (true)
+{
+    Console.Clear();
+    Console.WriteLine("=================================");
+    Console.WriteLine("       MENU DE DESAFIOS          ");
+    Console.WriteLine("=================================");
+    Console.WriteLine("0 - Sair.");
+    Console.WriteLine("1 - Desafio do Palíndromo.");
+    Console.WriteLine("2 - Desafio do Fibonacci.");
+    Console.WriteLine("=================================");
+    Console.Write("Escolha uma opção: ");
 
-string texto1 = "Ovo";
-string texto2 = "Roma me tem amor";
-string texto3 = "O lobo ama o bolo";
-string texto4 = "Não sou um palindromo";
+    var opcao = Console.ReadLine();
 
-Console.WriteLine("Desafio do Palindromo");
-Console.WriteLine(texto1 + ": " + Palindromo.EhPalindromo(texto1));
-Console.WriteLine(texto2 + ": " + Palindromo.EhPalindromo(texto2));
-Console.WriteLine(texto3 + ": " + Palindromo.EhPalindromo(texto3)); 
-Console.WriteLine(texto4 + ": " + Palindromo.EhPalindromo(texto4)); 
-Console.WriteLine("-------------------------------------------------");
+    if (opcao == "0")
+    {
+        Console.WriteLine("Saindo...");
+        break;
+    }
+
+    IDesafio? desafio = opcao switch
+    {
+        "1" => new DesafioPalindromo(),
+        "2" => new DesafioFibonacci(),
+        _ => null
+    };
+
+    if (desafio != null)
+    {
+        desafio.Executar();
+    }
+    else
+    {
+        Console.WriteLine("Opção inválida! Pressione qualquer tecla para tentar novamente.");
+        Console.ReadKey();
+    }
+}
